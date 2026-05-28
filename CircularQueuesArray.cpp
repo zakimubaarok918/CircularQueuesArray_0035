@@ -48,3 +48,13 @@ private:
 
     void remove()
     {
+        // cek apakah antrian kosong
+        if (FRONT == -1)
+        {
+            cout << "Queue underflow\n";
+            return;
+        }
+        cout << "\nThe element deleted from the queue is: " << queue_array[FRONT] << "\n";
+
+        // cek jika antrian hanya memiliki satu elemen
+        if (FRONT == REAR)
